@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using X52.Adapter;
 
 namespace X52.Instruments
 {
     public partial class Form1 : Form
     {
+        public X52Device Device { get; set; }
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Device = new X52Device();
         }
     }
 }
